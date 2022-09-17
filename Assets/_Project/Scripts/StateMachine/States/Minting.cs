@@ -1,18 +1,18 @@
 using System;
 using System.Collections;
 using System.Numerics;
-//using Cysharp.Threading.Tasks;
-//using MoralisUnity;
-//using Nethereum.Hex.HexTypes;
+using Cysharp.Threading.Tasks;
+using MoralisUnity;
+using Nethereum.Hex.HexTypes;
 using TMPro;
 using UnityEngine;
-//using WalletConnectSharp.Unity;
+using WalletConnectSharp.Unity;
 using State = Pixelplacement.State;
 
 public class Minting : State
 {
     [Header("WalletConnect")] 
-    //[SerializeField] private WalletConnect walletConnect;
+    [SerializeField] private WalletConnect walletConnect;
 
     [Header("UI Elements")]
     [SerializeField] private TextMeshProUGUI statusText;
@@ -42,10 +42,10 @@ public class Minting : State
             return;
         }
         
-        //MintNft(_gameManager.currentMetaverseItem.ipfsMetadataUrl);
+        MintNft(_gameManager.currentMetaverseItem.ipfsMetadataUrl);
 
         // If we get stuck at the minting process for any reason, we need to be able to leave the state.
-       // StartCoroutine(EnableCancelButton());
+        StartCoroutine(EnableCancelButton());
     }
 
     private void OnDisable()
@@ -53,7 +53,7 @@ public class Minting : State
         cancelButton.SetActive(false);
     }
 
-    /*private async void MintNft(string metadataUrl)
+    private async void MintNft(string metadataUrl)
     {
         statusText.text = "Please confirm transaction in your wallet";
         
@@ -74,9 +74,9 @@ public class Minting : State
         _gameManager.isItemMinted = true;
         
         //GoToViewing();
-    }*/
+    }
     
-    /*private async UniTask<string> ExecuteMinting(string metadataUrl)
+    private async UniTask<string> ExecuteMinting(string metadataUrl)
     {
         // Dummy TokenId based on current time.
         long currentTime = DateTime.Now.Ticks;
@@ -119,5 +119,5 @@ public class Minting : State
     public void GoToViewing()
     {
         ChangeState("Viewing");
-    }*/
+    }
 }

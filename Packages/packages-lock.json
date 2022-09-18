@@ -86,7 +86,7 @@
     },
     "com.unity.nuget.newtonsoft-json": {
       "version": "3.0.2",
-      "depth": 1,
+      "depth": 2,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
@@ -321,9 +321,7 @@
       "version": "https://github.com/MoralisWeb3/web3-unity-sdk.git",
       "depth": 0,
       "source": "git",
-      "dependencies": {
-        "com.unity.nuget.newtonsoft-json": "3.0.2"
-      },
+      "dependencies": {},
       "hash": "1b6ae721a7fe833cb9255de6dd781004ec6f6db1"
     },
     "com.unity.modules.ai": {

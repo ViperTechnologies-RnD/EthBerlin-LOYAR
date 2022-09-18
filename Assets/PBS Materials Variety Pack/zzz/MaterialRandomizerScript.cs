@@ -9,17 +9,17 @@ public class MaterialRandomizerScript : MonoBehaviour
     public List<Material> materials;
     public List<GameObject> gameObjects;
 
-    public void randomizeMaterials() { 
+    public void randomizeMaterials() {
         List<Material> materialsCopy = new List<Material>(materials);
         foreach (GameObject go in gameObjects) {
             if (materialsCopy.Count == 0) {
                 // time to quit
                 return;
-	        }
+            }
             int chosen = (int)Random.Range(0, materialsCopy.Count - 1);
             go.GetComponent<MeshRenderer>().material = materialsCopy[chosen];
             materialsCopy.RemoveAt(chosen);
-		}
+        }
     }
 
     public void findMaterials()
@@ -44,7 +44,7 @@ public class MaterialRandomizerScript : MonoBehaviour
         {
             if (gameObj.name == "Material Sphere")
             {
-				//Debug.Log(gameObj.name);
+                //Debug.Log(gameObj.name);
                 gameObjects.Add(gameObj);
             }
         }

@@ -1449,7 +1449,7 @@ MonoBehaviour:
   arSessionOrigin: {fileID: 388525030}
   arRaycastManager: {fileID: 388525033}
   arPlaneManager: {fileID: 388525032}
-  lootBoxPrefab: {fileID: 1899557385691984017, guid: 58c8ae5e9edbe224aa63039b8fe8accc,
+  lootBoxPrefab: {fileID: 1010512126809690108, guid: 179e539542a89c847b5efb62aa59852e,
     type: 3}
   scanPanel: {fileID: 1897481100}
   tapToPlacePanel: {fileID: 501399344}
